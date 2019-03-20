@@ -43,6 +43,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         progressView.progress = 0.0
+        progressView.layer.cornerRadius = 10
+        progressView.clipsToBounds = true
+        progressView.layer.sublayers![1].cornerRadius = 10
+        progressView.subviews[1].clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
